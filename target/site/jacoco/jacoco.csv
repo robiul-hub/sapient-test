@@ -1,0 +1,7 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+Pharma Store Maven Webapp,devops.pharma.model,User,30,43,0,0,3,18,2,9,2,9
+Pharma Store Maven Webapp,devops.pharma.controllerWithoutDb,UserPasswordController,7,64,5,5,2,16,5,2,0,2
+Pharma Store Maven Webapp,devops.pharma.controllerWithoutDb,UserRegisterController,23,90,6,8,7,22,6,3,0,2
+Pharma Store Maven Webapp,devops.pharma.controllerWithoutDb,UserLoginController,24,52,3,3,8,13,3,2,0,2
+Pharma Store Maven Webapp,devops.pharma.service,UserService,0,138,7,15,0,31,7,8,0,4
+Pharma Store Maven Webapp,devops.pharma.db,UserDb,0,50,0,0,0,9,0,2,0,2

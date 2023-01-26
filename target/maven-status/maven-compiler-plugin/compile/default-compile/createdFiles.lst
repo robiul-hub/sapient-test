@@ -1,0 +1,6 @@
+devops\pharma\model\User.class
+devops\pharma\controllerWithoutDb\UserRegisterController.class
+devops\pharma\db\UserDb.class
+devops\pharma\service\UserService.class
+devops\pharma\controllerWithoutDb\UserPasswordController.class
+devops\pharma\controllerWithoutDb\UserLoginController.class

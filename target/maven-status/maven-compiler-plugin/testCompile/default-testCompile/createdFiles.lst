@@ -1,0 +1,6 @@
+devops\test\pharma\service\UserServiceTest.class
+devops\test\pharma\controllerWithoutDb\ChangePasswordTest.class
+devops\test\pharma\controllerWithoutDb\LoginTest.class
+devops\test\pharma\controllerWithoutDb\RegisterTest.class
+devops\ilp1\LoginFunctionalTest.class
+devops\ilp1\IntegrationTest.class

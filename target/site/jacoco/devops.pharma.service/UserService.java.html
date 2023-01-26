@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>UserService.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Pharma Store Maven Webapp</a> &gt; <a href="index.source.html" class="el_package">devops.pharma.service</a> &gt; <span class="el_source">UserService.java</span></div><h1>UserService.java</h1><pre class="source lang-java linenums">package devops.pharma.service;
+
+import java.util.Iterator;
+import java.util.Map;
+import java.util.Set;
+
+import devops.pharma.db.UserDb;
+import devops.pharma.model.User;
+
+public class UserService {
+	UserDb userDb;
+<span class="fc" id="L12">	public UserService(){</span>
+<span class="fc" id="L13">		userDb=new UserDb();</span>
+<span class="fc" id="L14">	}</span>
+	
+	public boolean isAuthorized(User signup){
+<span class="fc" id="L17">		boolean isValidUser=false;</span>
+		
+<span class="pc bpc" id="L19" title="3 of 6 branches missed.">		if(signup!=null &amp;&amp; signup.getEmail()!=null &amp;&amp; signup.getPassword()!=null){</span>
+<span class="fc" id="L20">			 Set entrySet = userDb.userProfile.entrySet();</span>
+<span class="fc" id="L21">			 Iterator it = entrySet.iterator();</span>
+			 
+<span class="fc bfc" id="L23" title="All 2 branches covered.">			 while(it.hasNext()){</span>
+<span class="fc" id="L24">				 Map.Entry u = (Map.Entry)it.next();</span>
+					//System.out.println(u.getKey()+&quot;\t&quot;+u.getValue());
+<span class="fc bfc" id="L26" title="All 2 branches covered.">				 if(u.getKey().equals(signup.getEmail())){</span>
+<span class="fc" id="L27">					 isValidUser=true;</span>
+				 }
+<span class="fc" id="L29">			 }	</span>
+		}		
+		
+<span class="fc" id="L32">		return isValidUser;</span>
+	}
+
+	
+	public boolean updatePassword(User user){
+<span class="fc" id="L37">		boolean isUpdated=false;</span>
+<span class="pc bpc" id="L38" title="2 of 4 branches missed.">		if(user!=null &amp;&amp; user.getEmail()!=null){</span>
+			
+<span class="fc bfc" id="L40" title="All 2 branches covered.">			for (Map.Entry&lt;String, User&gt; entry : userDb.userProfile.entrySet()) {</span>
+<span class="fc bfc" id="L41" title="All 2 branches covered.">				 if(entry.getKey().equals(user.getEmail())){</span>
+<span class="fc" id="L42">					 user.setFirstName(entry.getValue().getFirstName());</span>
+<span class="fc" id="L43">					 user.setLastName(entry.getValue().getLastName());</span>
+<span class="fc" id="L44">					 user.setEmail(entry.getValue().getEmail());</span>
+<span class="fc" id="L45">					 user.setPassword(user.getPassword());</span>
+<span class="fc" id="L46">					 entry.setValue(user);</span>
+<span class="fc" id="L47">					 isUpdated=true;</span>
+					 //System.out.println(user);
+				 }				
+<span class="fc" id="L50">			}</span>
+			
+
+		}
+<span class="fc" id="L54">		return isUpdated;</span>
+		
+	}
+	
+	public boolean doRegistration(User user){
+<span class="fc" id="L59">		boolean isCreated=false;</span>
+<span class="pc bpc" id="L60" title="2 of 4 branches missed.">		if(user!=null &amp;&amp; user.getEmail()!=null){			</span>
+<span class="fc" id="L61">			userDb.userProfile.put(user.getEmail(), user);</span>
+<span class="fc" id="L62">			isCreated=true;		</span>
+<span class="fc" id="L63">			System.out.println(&quot;Number of records available: &quot;+userDb.userProfile.size());</span>
+		}
+<span class="fc" id="L65">		return isCreated;</span>
+	}
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.6.202009150832</span></div></body></html>

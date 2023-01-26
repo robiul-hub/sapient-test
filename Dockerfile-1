@@ -1,0 +1,4 @@
+FROM openjdk:8
+ADD target/Pharmastore.jar Pharmastore.jar
+ENTRYPOINT ["java", "-jar","Pharmastore.jar"]
+EXPOSE 8080
