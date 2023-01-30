@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="devops.test.pharma.controllerWithoutDb.RegisterTest" time="0" tests="2" errors="0" skipped="0" failures="0">
+<testsuite name="devops.test.pharma.controllerWithoutDb.RegisterTest" time="0.001" tests="2" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="java.vm.version" value="11.0.18+9-LTS-195"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-11\bin"/>
-    <property name="maven.multiModuleProjectDirectory" value="C:\Users\Robiul Islam\OneDrive\Desktop\Docker-Image-Build"/>
+    <property name="maven.multiModuleProjectDirectory" value="C:\Users\Robiul Islam\sapient\Docker-Image-Build"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
     <property name="java.vendor.url" value="https://openjdk.java.net/"/>
     <property name="guice.disable.misplaced.annotation.check" value="true"/>
@@ -15,7 +15,7 @@
     <property name="user.country" value="GB"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="user.dir" value="C:\Users\Robiul Islam\OneDrive\Desktop\Docker-Image-Build"/>
+    <property name="user.dir" value="C:\Users\Robiul Islam\sapient\Docker-Image-Build"/>
     <property name="java.vm.compressedOopsMode" value="Zero based"/>
     <property name="java.runtime.version" value="11.0.18+9-LTS-195"/>
     <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
@@ -65,5 +65,5 @@
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
   <testcase name="testRegistrationFail" classname="devops.test.pharma.controllerWithoutDb.RegisterTest" time="0"/>
-  <testcase name="testRegistrationSuccess" classname="devops.test.pharma.controllerWithoutDb.RegisterTest" time="0"/>
+  <testcase name="testRegistrationSuccess" classname="devops.test.pharma.controllerWithoutDb.RegisterTest" time="0.001"/>
 </testsuite>
